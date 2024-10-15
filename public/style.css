@@ -1,0 +1,199 @@
+/* General styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.profile-section {
+    text-align: center;
+    position: relative;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.profile-video {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: relative;
+}
+
+/* Video controls overlay */
+.video-container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+}
+
+.video-controls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    z-index: 10;
+}
+
+.video-controls i {
+    font-size: 36px;
+    color: white;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+/* Video controls hover sebelum tombol diklik */
+.video-container:hover .video-controls i {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+/* Hilangkan hover effect setelah tombol play/pause diklik */
+.video-container.playing:hover .video-controls i,
+.video-container.paused:hover .video-controls i {
+    opacity: 0; /* Sembunyikan ikon setelah video diputar atau dijeda */
+}
+
+.video-controls i.hidden {
+    display: none;
+}
+
+/* About Section */
+.about-section h2 {
+    text-align: center;
+    color: #6200ea;
+}
+
+.about-section p {
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #c7c7c7;
+    margin-bottom: 20px;
+}
+
+/* Form Section */
+.form-section {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin: 0 auto; /* Align to center */
+}
+
+.form-section h2 {
+    text-align: center;
+    color: #03dac6;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.input-group-text {
+    background-color: #6200ea;
+    color: white;
+    border-radius: 10px 0 0 10px;
+    padding: 10px;
+}
+
+.input-group .form-control {
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 0 10px 10px 0;
+    padding: 10px;
+}
+
+.form-control:focus {
+    border-color: #6200ea;
+    box-shadow: none;
+}
+
+textarea.form-control {
+    resize: none;
+    height: 80px;
+}
+
+.submit-btn {
+    width: 100%;
+    background-color: #6200ea;
+    border: none;
+    padding: 8px 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #3700b3;
+}
+
+.cv-download {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.download-btn {
+    background-color: #03dac6;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+.download-btn:hover {
+    background-color: #018786;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .profile-section, .about-section, .form-section {
+        padding: 10px;
+    }
+
+    .profile-photo, .profile-video {
+        width: 100px;
+        height: 100px;
+    }
+
+    .submit-btn, .download-btn {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .form-section {
+        padding: 15px;
+        max-width: 100%;
+    }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View CV</title>
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="/cv-style.css"> <!-- File CSS eksternal -->
+</head>
+<body>
+    <section class="cv-section">
+        <h2>Your CV is Locked</h2>
+        <div class="cv-preview">
+            <img src="https://j.top4top.io/p_3207cifrd1.jpg" alt="CV">
+            <div class="overlay">
+                <p class="locked-text">Locked</p>
+            </div>
+        </div>
+        <p>To view the full CV, please enter your key below:</p>
+        <div class="input-group">
+            <input type="text" id="keyInput" placeholder="Enter key here">
+            <button id="submitKeyBtn"><i class="bi bi-key"></i> Submit Key</button>
+        </div>
+
+        <button id="generateKeyBtn"><i class="bi bi-gear"></i> Generate Key</button>
+        
+        <!-- Pop-up untuk menunjukkan key yang di-generate -->
+        <div id="popup" class="popup hidden">
+            <p>Your key: <span id="generatedKey"></span></p>
+            <button id="copyKeyBtn"><i class="bi bi-clipboard"></i> Copy Key</button>
+            <button id="closePopupBtn"><i class="bi bi-x-circle"></i> Close</button>
+        </div>
+
+        <a href="/download-cv" class="download-link" id="downloadLink"><i class="bi bi-download"></i> Download CV</a>
+    </section>
+
+    <script src="/view.js"></script>
+</body>
+</html>
